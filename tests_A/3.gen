@@ -1,0 +1,19 @@
+#!/usr/bin/perl -l
+
+srand (1003);
+
+$n = 100;
+$q = 1000;
+print "$n $q";
+for (2..$n) {
+	print int(rand($_-1))+1;
+}
+
+for (1..$q) {
+	$a = $b = int (rand($n)) + 1;
+	while ($a == $b) {
+		$b = int (rand($n)) + 1;
+	}
+	print "$a $b";
+}
+
